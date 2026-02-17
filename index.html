@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURTIRO | Technical Recruitment</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fb;      
+            --main-text: #24292e;     
+            --accent-blue: #0366d6;   
+            --muted-text: #6a737d;    
+            --border-color: #e1e4e8;
+            --input-bg: #ffffff;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg-color);
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            color: var(--main-text);
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        h1::after {
+            content: "_";
+            color: var(--accent-blue);
+            animation: blink 1s step-end infinite;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--muted-text);
+            max-width: 550px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        /* Form Styling */
+        .notify-form {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            max-width: 400px;
+            margin: 0 auto;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        input[type="email"] {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            outline: none;
+            font-family: inherit;
+            font-size: 0.9rem;
+            background: var(--input-bg);
+        }
+
+        button {
+            background: var(--main-text);
+            color: white;
+            border: none;
+            padding: 0 20px;
+            font-family: inherit;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background: var(--accent-blue);
+        }
+
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .line-decoration {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 30px;
+            border-right: 1px solid var(--border-color);
+            padding-top: 20px;
+            color: #d1d5da;
+            font-size: 12px;
+            user-select: none;
+            text-align: right;
+            padding-right: 10px;
+            z-index: 1;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .description { font-size: 0.85rem; }
+            .line-decoration { display: none; }
+            .notify-form { flex-direction: column; border: none; }
+            input[type="email"], button { border-radius: 4px; margin-bottom: 10px; border: 1px solid var(--border-color); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="line-decoration">
+        1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12
+    </div>
+
+    <div class="container">
+        <h1>AURTIRO</h1>
+        <p class="description">
+            Coming soon. Specialized technical recruitment for elite engineers and high-performance teams. 
+            Analog white-glove staffing for the humans building the future of AI.
+        </p>
+
+        <form class="notify-form" action="mailto:hello@aurtiro.com" method="post" enctype="text/plain">
+            <input type="email" name="Email" placeholder="user@domain.com" required>
+            <button type="submit">Notify Me</button>
+        </form>
+    </div>
+
+</body>
+</html>
